@@ -198,5 +198,14 @@ body{
         margin: 10px; /* Decrease the margin for the image container */
     }
 }
-
+@media (max-width: 768px) {
+    .container2 {
+        grid-template-rows: auto; /* Change the grid layout to auto rows */
+        grid-template-columns: repeat(2, 1fr); /* Two columns for smaller screens */
+        max-height: none; /* Reset the maximum height */
+        row-gap: 8px; /* Adjust the row gap for smaller screens */
+      }
+  
+    /* Add any other style adjustments for smaller screens here */
+  }
    
