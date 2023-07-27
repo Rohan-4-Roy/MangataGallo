@@ -15,6 +15,9 @@ body{
     justify-content: center;
     border-radius: 25px;
     margin: 20px;
+    overflow-y: auto; /* Enable vertical scrolling if the content overflows */
+    max-height: 500px; /* Set the maximum height for the container */
+   
 }
 
 .item1 {
@@ -140,22 +143,20 @@ body{
     justify-content: center;
     align-items: center;
 }
-.pdts{
-    display: grid;
-    grid-template-columns: repeat(3,500px);
-    grid-template-rows: repeat(2,500px);
+.pdts {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
     justify-content: center;
-    justify-items: center;
-        
-        background-image: url('bp1.jpg');
-        background-color: transparent;
-        background-size: cover;
+    background-image: url('bp1.jpg');
+    background-color: transparent;
+    background-size: cover;
     background-color: rgb(187, 175, 175);
-    padding: 0 20px;
+    padding: 20px;
     border-radius: 25px;
     margin: 20px;
-    row-gap: 10px;
-    column-gap: 10px;
+    overflow-y: auto; /* Enable vertical scrolling if the content overflows */
+    max-height: 500px; /* Set the maximum height for the container */
 }
 #pdthead{
     text-align: center;
@@ -164,3 +165,38 @@ body{
     margin: 20px;
     background-color: rgb(200, 144, 76);
 }
+
+@media (max-width: 768px) {
+    .container1 {
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+        padding: 10px;
+    }
+
+    .container1 li {
+        margin: 5px 0;
+    }
+}
+
+.image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+    border-radius: 15px;
+    margin: 20px;
+    overflow-y: auto; /* Enable vertical scrolling if the content overflows */
+    max-height: 500px; /* Set the maximum height for the container */
+}
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column; /* Stack the text and image vertically on smaller screens */
+    }
+
+    .image-container {
+        margin: 10px; /* Decrease the margin for the image container */
+    }
+}
+
+   
